@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wave Theory — Complete Visual Guide</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f8fafc;color:#0f172a;line-height:1.6}
+.page{max-width:960px;margin:0 auto;padding:24px 20px}
+header{background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%);color:#fff;padding:40px 32px;border-radius:12px;margin-bottom:32px}
+header h1{font-size:28px;font-weight:700;margin-bottom:6px;letter-spacing:-0.5px}
+header h2{font-size:14px;font-weight:400;color:#94a3b8;margin-bottom:4px}
+header .subtitle{font-size:13px;color:#64748b}
+.meta-row{display:flex;gap:16px;margin-top:20px;flex-wrap:wrap}
+.meta-pill{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:4px 12px;font-size:12px;color:#cbd5e1}
+.toc{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:24px;margin-bottom:32px}
+.toc h3{font-size:14px;font-weight:600;color:#475569;letter-spacing:.06em;text-transform:uppercase;margin-bottom:16px}
+.toc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px}
+.toc-cat{padding:10px 12px;border-radius:8px;border:1px solid;cursor:default}
+.toc-cat-title{font-size:12px;font-weight:600;margin-bottom:2px}
+.toc-cat-range{font-size:11px;opacity:.7}
+.group-header{display:flex;align-items:center;gap:12px;margin:36px 0 16px;padding-bottom:10px;border-bottom:2px solid}
+.group-header h2{font-size:18px;font-weight:700}
+.group-num{font-size:13px;opacity:.6;margin-left:auto}
+.el-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;margin-bottom:20px;page-break-inside:avoid}
+.el-card-header{padding:14px 18px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #f1f5f9}
+.el-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;flex-shrink:0}
+.el-name{font-size:16px;font-weight:600;flex:1}
+.badge{font-size:10px;font-weight:600;padding:3px 8px;border-radius:12px;letter-spacing:.04em}
+.el-body{display:flex;gap:0;flex-wrap:wrap}
+.el-visual{padding:16px;background:#f8fafc;border-right:1px solid #f1f5f9;min-width:300px;flex-shrink:0}
+.el-visual svg{display:block;border-radius:6px;width:100%;max-width:280px}
+.el-caption{font-size:11px;color:#64748b;margin-top:8px;text-align:center;font-style:italic}
+.el-text{padding:16px 20px;flex:1;min-width:240px}
+.el-desc{font-size:13.5px;color:#1e293b;line-height:1.65;margin-bottom:12px}
+.prac-box{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:10px 12px}
+.prac-box strong{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#15803d;display:block;margin-bottom:4px}
+.prac-box p{font-size:12.5px;color:#166534;line-height:1.6}
+@media(max-width:600px){.el-visual{border-right:none;border-bottom:1px solid #f1f5f9;min-width:100%}.el-body{flex-direction:column}.toc-grid{grid-template-columns:1fr 1fr}}
+@media print{.page{padding:0}.el-card{break-inside:avoid}.group-header{break-after:avoid}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <h1>Wave Theory</h1>
+  <h2>Complete Visual Guide — 24 Core Elements</h2>
+  <div class="subtitle">From basic anatomy to Elliott structure to SMC waves · Applied to Nifty Options</div>
+  <div class="meta-row">
+    <span class="meta-pill">24 Elements</span>
+    <span class="meta-pill">5 Categories</span>
+    <span class="meta-pill">Elliott + SMC</span>
+    <span class="meta-pill">Nifty 50 Focus</span>
+  </div>
+</header>
+
+<div class="toc">
+  <h3>Contents</h3>
+  <div class="toc-grid">
+    <div class="toc-cat" style="border-color:#60a5fa30;background:#60a5fa08">
+      <div class="toc-cat-title" style="color:#60a5fa">Wave Anatomy</div>
+      <div class="toc-cat-range" style="color:#60a5fa">Elements 1–5</div>
+    </div>
+    <div class="toc-cat" style="border-color:#22c55e30;background:#22c55e08">
+      <div class="toc-cat-title" style="color:#22c55e">Elliott Wave Structure</div>
+      <div class="toc-cat-range" style="color:#22c55e">Elements 6–10</div>
+    </div>
+    <div class="toc-cat" style="border-color:#a855f730;background:#a855f708">
+      <div class="toc-cat-title" style="color:#a855f7">SMC Wave Concepts</div>
+      <div class="toc-cat-range" style="color:#a855f7">Elements 11–15</div>
+    </div>
+    <div class="toc-cat" style="border-color:#f59e0b30;background:#f59e0b08">
+      <div class="toc-cat-title" style="color:#f59e0b">Wave Patterns</div>
+      <div class="toc-cat-range" style="color:#f59e0b">Elements 16–20</div>
+    </div>
+    <div class="toc-cat" style="border-color:#ec489930;background:#ec489908">
+      <div class="toc-cat-title" style="color:#ec4899">Trading Application</div>
+      <div class="toc-cat-range" style="color:#ec4899">Elements 21–24</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ WAVE ANATOMY ============ -->
+<div class="group-header" style="border-color:#60a5fa40"><h2 style="color:#60a5fa">Wave Anatomy</h2><span class="group-num" style="color:#60a5fa">Elements 1–5</span></div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#60a5fa">1</div>
+    <div class="el-name">Impulse Wave</div>
+    <span class="badge" style="background:#22c55e20;color:#22c55e">Core</span>
+    <span class="badge" style="background:#22c55e20;color:#22c55e">Easy</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="105" x2="270" y2="105" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><line x1="25" y1="92" x2="25" y2="113" stroke="#22c55e" stroke-width="1.5"/><rect x="18" y="94" width="14" height="17" fill="#22c55e"/><line x1="50" y1="78" x2="50" y2="98" stroke="#22c55e" stroke-width="1.5"/><rect x="43" y="80" width="14" height="17" fill="#22c55e"/><line x1="75" y1="62" x2="75" y2="84" stroke="#22c55e" stroke-width="1.5"/><rect x="68" y="64" width="14" height="19" fill="#22c55e"/><line x1="100" y1="46" x2="100" y2="68" stroke="#22c55e" stroke-width="1.5"/><rect x="93" y="48" width="14" height="19" fill="#22c55e"/><line x1="125" y1="30" x2="125" y2="52" stroke="#22c55e" stroke-width="1.5"/><rect x="118" y="32" width="14" height="19" fill="#22c55e"/><line x1="150" y1="20" x2="150" y2="36" stroke="#22c55e" stroke-width="1.5"/><rect x="143" y="22" width="14" height="14" fill="#22c55e"/><path d="M 18 108 L 165 25" stroke="#4ade80" stroke-width="1" stroke-dasharray="2,2" fill="none" opacity="0.6"/><text x="190" y="40" font-family="monospace" font-size="8" fill="#4ade80" font-weight="400">Strong</text><text x="190" y="51" font-family="monospace" font-size="8" fill="#4ade80" font-weight="400">directional</text><text x="190" y="62" font-family="monospace" font-size="8" fill="#4ade80" font-weight="400">move</text><text x="140" y="122" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.25)" text-anchor="middle">Sustained move with momentum</text></svg>
+      <div class="el-caption">Sustained directional move with momentum</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">A strong directional price move where buyers (or sellers) overwhelm the opposite side. Candles are large-bodied, consecutive, and in the same direction. Volume is above average. Pullbacks are small or absent.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>Option buying works ONLY during impulse waves — premiums expand fast, theta is irrelevant. Your rule 5.2/5.4 (gap + 15-min + 5-min confirmation) is designed to catch the start of an impulse. Outside impulses, theta kills you.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#60a5fa">2</div>
+    <div class="el-name">Corrective Wave</div>
+    <span class="badge" style="background:#22c55e20;color:#22c55e">Core</span>
+    <span class="badge" style="background:#22c55e20;color:#22c55e">Easy</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="105" x2="270" y2="105" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><line x1="25" y1="92" x2="25" y2="113" stroke="#22c55e" stroke-width="1.5"/><rect x="18" y="94" width="14" height="17" fill="#22c55e"/><line x1="50" y1="72" x2="50" y2="95" stroke="#22c55e" stroke-width="1.5"/><rect x="43" y="74" width="14" height="20" fill="#22c55e"/><line x1="75" y1="50" x2="75" y2="76" stroke="#22c55e" stroke-width="1.5"/><rect x="68" y="52" width="14" height="22" fill="#22c55e"/><line x1="100" y1="34" x2="100" y2="54" stroke="#22c55e" stroke-width="1.5"/><rect x="93" y="36" width="14" height="17" fill="#22c55e"/><line x1="125" y1="42" x2="125" y2="60" stroke="#ef4444" stroke-width="1.5"/><rect x="118" y="44" width="14" height="12" fill="#ef4444"/><line x1="150" y1="54" x2="150" y2="68" stroke="#ef4444" stroke-width="1.5"/><rect x="143" y="56" width="14" height="10" fill="#ef4444"/><line x1="175" y1="48" x2="175" y2="62" stroke="#ef4444" stroke-width="1.5"/><rect x="168" y="50" width="14" height="10" fill="#ef4444"/><line x1="200" y1="40" x2="200" y2="58" stroke="#22c55e" stroke-width="1.5"/><rect x="193" y="42" width="14" height="14" fill="#22c55e"/><line x1="225" y1="22" x2="225" y2="42" stroke="#22c55e" stroke-width="1.5"/><rect x="218" y="24" width="14" height="16" fill="#22c55e"/><line x1="18" y1="98" x2="107" y2="36" stroke="#4ade80" stroke-width="0.8" stroke-dasharray="2,2" fill="none" opacity="0.5"/><line x1="107" y1="36" x2="182" y2="60" stroke="#f87171" stroke-width="0.8" stroke-dasharray="2,2" fill="none" opacity="0.5"/><line x1="182" y1="60" x2="232" y2="25" stroke="#4ade80" stroke-width="0.8" stroke-dasharray="2,2" fill="none" opacity="0.5"/><text x="65" y="14" font-family="monospace" font-size="7" fill="#4ade80" text-anchor="middle" font-weight="400">Impulse</text><text x="148" y="80" font-family="monospace" font-size="7" fill="#f87171" text-anchor="middle" font-weight="400">Correction</text><text x="215" y="14" font-family="monospace" font-size="7" fill="#4ade80" text-anchor="middle" font-weight="400">Impulse</text><text x="140" y="122" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.25)" text-anchor="middle">Pullback against trend</text></svg>
+      <div class="el-caption">Counter-trend pullback between impulses</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">A pullback or pause against the prevailing trend. Smaller candles, overlapping ranges, lower volume than the impulse. Corrections retrace a portion (typically 38–62%) of the prior impulse before the trend resumes.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>NEVER buy options during a correction — theta + IV crush + sideways price = guaranteed loss. Your "no trade between EMAs" rule (5.6) and "no trade 11:30–14:00" rule (3.3) exist because that's when corrections dominate. Wait for the impulse.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#60a5fa">3</div>
+    <div class="el-name">Wave Amplitude</div>
+    <span class="badge" style="background:#22c55e20;color:#22c55e">Core</span>
+    <span class="badge" style="background:#f59e0b20;color:#f59e0b">Medium</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="105" x2="270" y2="105" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><polyline points="20,95 40,75 55,82 75,60 95,68 115,45" fill="none" stroke="#4ade80" stroke-width="2"/><line x1="20" y1="95" x2="20" y2="45" stroke="#fbbf24" stroke-width="0.5" stroke-dasharray="2,2"/><line x1="115" y1="45" x2="115" y2="95" stroke="#fbbf24" stroke-width="0.5" stroke-dasharray="2,2"/><line x1="14" y1="45" x2="26" y2="45" stroke="#fbbf24" stroke-width="0.8"/><line x1="14" y1="95" x2="26" y2="95" stroke="#fbbf24" stroke-width="0.8"/><text x="8" y="73" font-family="monospace" font-size="7" fill="#fbbf24" text-anchor="middle" font-weight="400">small</text><polyline points="145,98 165,72 180,80 200,50 220,60 240,25 255,32 268,18" fill="none" stroke="#4ade80" stroke-width="2"/><line x1="145" y1="98" x2="145" y2="18" stroke="#fbbf24" stroke-width="0.5" stroke-dasharray="2,2"/><line x1="268" y1="18" x2="268" y2="98" stroke="#fbbf24" stroke-width="0.5" stroke-dasharray="2,2"/><line x1="138" y1="18" x2="153" y2="18" stroke="#fbbf24" stroke-width="0.8"/><line x1="138" y1="98" x2="153" y2="98" stroke="#fbbf24" stroke-width="0.8"/><text x="135" y="60" font-family="monospace" font-size="7" fill="#fbbf24" text-anchor="middle" font-weight="400">LARGE</text><text x="67" y="14" font-family="monospace" font-size="7" fill="#9ca3af" text-anchor="middle" font-weight="400">Weak wave</text><text x="200" y="14" font-family="monospace" font-size="7" fill="#4ade80" text-anchor="middle" font-weight="400">Strong wave</text><text x="140" y="122" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.25)" text-anchor="middle">Larger amplitude = stronger trend</text></svg>
+      <div class="el-caption">Vertical distance from start to end of wave</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">The vertical distance (in points) covered by a wave from start to peak. Bigger amplitude = stronger conviction. Compare the amplitude of consecutive waves — when impulses shrink and corrections grow, trend is weakening.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>Your minimum 60-point Nifty target is essentially a minimum amplitude requirement. If the setup's projected amplitude is &lt; 60 points (price near resistance, tight range, low VIX), skip it. Strong amplitude days = trail SL and let it run.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#60a5fa">4</div>
+    <div class="el-name">Wave Symmetry</div>
+    <span class="badge" style="background:#f59e0b20;color:#f59e0b">Important</span>
+    <span class="badge" style="background:#f59e0b20;color:#f59e0b">Medium</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="105" x2="270" y2="105" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><polyline points="20,95 50,55 70,72 100,32" fill="none" stroke="#4ade80" stroke-width="2"/><polyline points="100,32 130,72 150,55 180,15" fill="none" stroke="#a855f7" stroke-width="2"/><line x1="20" y1="100" x2="100" y2="100" stroke="#fbbf24" stroke-width="0.6"/><line x1="20" y1="98" x2="20" y2="102" stroke="#fbbf24" stroke-width="0.6"/><line x1="100" y1="98" x2="100" y2="102" stroke="#fbbf24" stroke-width="0.6"/><line x1="100" y1="115" x2="180" y2="115" stroke="#fbbf24" stroke-width="0.6"/><line x1="100" y1="113" x2="100" y2="117" stroke="#fbbf24" stroke-width="0.6"/><line x1="180" y1="113" x2="180" y2="117" stroke="#fbbf24" stroke-width="0.6"/><text x="60" y="93" font-family="monospace" font-size="7" fill="#fbbf24" text-anchor="middle" font-weight="400">Wave A</text><text x="140" y="125" font-family="monospace" font-size="7" fill="#fbbf24" text-anchor="middle" font-weight="400">Wave B = A</text><text x="200" y="35" font-family="monospace" font-size="7" fill="#a855f7" font-weight="400">Equal</text><text x="200" y="46" font-family="monospace" font-size="7" fill="#a855f7" font-weight="400">length</text><text x="200" y="57" font-family="monospace" font-size="7" fill="#a855f7" font-weight="400">+ time</text><circle cx="100" cy="32" r="3" fill="#fbbf24"/></svg>
+      <div class="el-caption">Equal time + equal distance = symmetry</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">A wave is symmetric when its time duration and price distance match a prior wave. Markets often produce "measured moves" where Wave B equals Wave A. The 1:1 projection is the most reliable target for the next leg.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>After a 60-point Wave A move, project the same 60 points for Wave B as your target. If a CHoCH happens and Wave A was 80 points, expect Wave B to extend at least 80 points before booking. Use prior wave size to calculate trail-SL distance.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#60a5fa">5</div>
+    <div class="el-name">Swing Points (HH HL LH LL)</div>
+    <span class="badge" style="background:#22c55e20;color:#22c55e">Core</span>
+    <span class="badge" style="background:#f59e0b20;color:#f59e0b">Medium</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="105" x2="270" y2="105" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><polyline points="20,90 45,55 65,72 95,40 115,58 145,22 165,42" fill="none" stroke="#4ade80" stroke-width="1.8"/><polyline points="165,42 190,65 205,52 230,80 250,68 268,92" fill="none" stroke="#ef4444" stroke-width="1.8"/><circle cx="45" cy="55" r="2.5" fill="#4ade80"/><text x="38" y="50" font-family="monospace" font-size="7" fill="#4ade80" text-anchor="end" font-weight="400">H</text><circle cx="65" cy="72" r="2.5" fill="#4ade80"/><text x="58" y="80" font-family="monospace" font-size="7" fill="#4ade80" text-anchor="end" font-weight="400">L</text><circle cx="95" cy="40" r="2.5" fill="#4ade80"/><text x="88" y="35" font-family="monospace" font-size="7" fill="#4ade80" text-anchor="end" font-weight="400">HH</text><circle cx="115" cy="58" r="2.5" fill="#4ade80"/><text x="118" y="66" font-family="monospace" font-size="7" fill="#4ade80" font-weight="400">HL</text><circle cx="145" cy="22" r="2.5" fill="#4ade80"/><text x="138" y="17" font-family="monospace" font-size="7" fill="#4ade80" text-anchor="end" font-weight="400">HH</text><circle cx="190" cy="65" r="2.5" fill="#ef4444"/><text x="193" y="72" font-family="monospace" font-size="7" fill="#ef4444" font-weight="400">LL?</text><circle cx="205" cy="52" r="2.5" fill="#ef4444"/><text x="208" y="48" font-family="monospace" font-size="7" fill="#ef4444" font-weight="400">LH</text><circle cx="230" cy="80" r="2.5" fill="#ef4444"/><text x="233" y="88" font-family="monospace" font-size="7" fill="#ef4444" font-weight="400">LL</text><text x="140" y="122" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.25)" text-anchor="middle">HH+HL = uptrend · LH+LL = downtrend</text></svg>
+      <div class="el-caption">Higher Highs/Lows = uptrend · Lower Highs/Lows = downtrend</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">The four building blocks of market structure. HH = price makes a higher high than the prior peak. HL = pullback ends above the prior trough. Sequence of HH+HL = uptrend. Sequence of LH+LL = downtrend. Mixed = transition.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>Replaces subjective "bullish/bearish" classification in your rule 2.1. Check the last 3 swing points on the 1-day chart. HH+HL → bias is bullish, only take CE setups. LH+LL → bias is bearish, only take PE setups. Mixed → wait.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ELLIOTT WAVE STRUCTURE ============ -->
+<div class="group-header" style="border-color:#22c55e40"><h2 style="color:#22c55e">Elliott Wave Structure</h2><span class="group-num" style="color:#22c55e">Elements 6–10</span></div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#22c55e">6</div>
+    <div class="el-name">5-Wave Impulse</div>
+    <span class="badge" style="background:#22c55e20;color:#22c55e">Core</span>
+    <span class="badge" style="background:#f59e0b20;color:#f59e0b">Medium</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="115" x2="270" y2="115" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><polyline points="20,108 60,72 90,90 160,28 200,50 250,15" fill="none" stroke="#4ade80" stroke-width="2"/><circle cx="20" cy="108" r="2" fill="#9ca3af"/><circle cx="60" cy="72" r="3" fill="#4ade80"/><text x="60" y="65" font-family="monospace" font-size="9" fill="#4ade80" text-anchor="middle" font-weight="700">1</text><circle cx="90" cy="90" r="3" fill="#ef4444"/><text x="95" y="98" font-family="monospace" font-size="9" fill="#ef4444" font-weight="700">2</text><circle cx="160" cy="28" r="3" fill="#4ade80"/><text x="160" y="22" font-family="monospace" font-size="9" fill="#4ade80" text-anchor="middle" font-weight="700">3</text><circle cx="200" cy="50" r="3" fill="#ef4444"/><text x="205" y="58" font-family="monospace" font-size="9" fill="#ef4444" font-weight="700">4</text><circle cx="250" cy="15" r="3" fill="#4ade80"/><text x="250" y="10" font-family="monospace" font-size="9" fill="#4ade80" text-anchor="middle" font-weight="700">5</text><text x="40" y="95" font-family="monospace" font-size="7" fill="#4ade80" font-weight="400">init</text><text x="125" y="55" font-family="monospace" font-size="7" fill="#4ade80" font-weight="400">extend</text><text x="225" y="35" font-family="monospace" font-size="7" fill="#4ade80" font-weight="400">final</text><text x="140" y="122" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.25)" text-anchor="middle">3 impulses + 2 corrections = 5 waves</text></svg>
+      <div class="el-caption">Three up-legs separated by two pullbacks</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">The classic Elliott structure for a trending move. Waves 1, 3, 5 are impulses in the trend direction. Waves 2 and 4 are corrections against it. Wave 3 is usually the longest. Wave 4 cannot overlap Wave 1's territory.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>Identify which wave you're in BEFORE entering. Best CE entries: start of Wave 3 (after Wave 2 finds support at EMA). Avoid entering at Wave 5 — exhaustion is near. Wave 3 is where your "60-point minimum" target almost always works.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#22c55e">7</div>
+    <div class="el-name">3-Wave Correction (ABC)</div>
+    <span class="badge" style="background:#22c55e20;color:#22c55e">Core</span>
+    <span class="badge" style="background:#f59e0b20;color:#f59e0b">Medium</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="115" x2="270" y2="115" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><polyline points="20,20 60,15 100,12" fill="none" stroke="#4ade80" stroke-width="2"/><text x="50" y="9" font-family="monospace" font-size="7" fill="#4ade80" text-anchor="middle" font-weight="400">5-wave peak</text><polyline points="100,12 140,55 180,30 230,80" fill="none" stroke="#ef4444" stroke-width="2"/><circle cx="100" cy="12" r="3" fill="#9ca3af"/><circle cx="140" cy="55" r="3" fill="#ef4444"/><text x="140" y="65" font-family="monospace" font-size="11" fill="#ef4444" text-anchor="middle" font-weight="700">A</text><circle cx="180" cy="30" r="3" fill="#4ade80"/><text x="180" y="24" font-family="monospace" font-size="11" fill="#4ade80" text-anchor="middle" font-weight="700">B</text><circle cx="230" cy="80" r="3" fill="#ef4444"/><text x="232" y="92" font-family="monospace" font-size="11" fill="#ef4444" font-weight="700">C</text><line x1="100" y1="12" x2="230" y2="12" stroke="#a855f7" stroke-width="0.5" stroke-dasharray="2,2"/><text x="247" y="84" font-family="monospace" font-size="7" fill="#a855f7" font-weight="400">end</text><text x="140" y="122" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.25)" text-anchor="middle">Down → up → down (or reverse)</text></svg>
+      <div class="el-caption">A-B-C: two impulses against, one with</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">After a 5-wave impulse completes, price corrects in 3 waves: A (against trend), B (a bounce that fools traders into re-entering), C (final move against trend). Wave C often equals Wave A in length — measured move principle.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>Wave B is the trap. Most retail buys here thinking the trend resumed — then C wipes them out. If you see a rally after a 5-wave move, DO NOT enter CE — it might be Wave B. Wait for Wave C to complete, then take the next 5-wave structure.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#22c55e">8</div>
+    <div class="el-name">Wave 1 — Initiation</div>
+    <span class="badge" style="background:#f59e0b20;color:#f59e0b">Important</span>
+    <span class="badge" style="background:#ef444420;color:#ef4444">Hard</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="115" x2="270" y2="115" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><polyline points="10,30 30,55 50,42 70,72 90,60 110,88 130,95" fill="none" stroke="#ef4444" stroke-width="1.8"/><circle cx="130" cy="95" r="3" fill="#fbbf24"/><text x="125" y="105" font-family="monospace" font-size="7" fill="#fbbf24" text-anchor="end" font-weight="400">low</text><polyline points="130,95 170,70 190,82 220,40" fill="none" stroke="#4ade80" stroke-width="2.5"/><circle cx="220" cy="40" r="3" fill="#4ade80"/><text x="220" y="34" font-family="monospace" font-size="11" fill="#4ade80" text-anchor="middle" font-weight="700">1</text><polyline points="220,40 240,58 256,52" fill="none" stroke="#ef4444" stroke-width="1.5"/><line x1="35" y1="30" x2="135" y2="100" stroke="#f87171" stroke-width="0.5" stroke-dasharray="2,2"/><text x="55" y="25" font-family="monospace" font-size="7" fill="#f87171" font-weight="400">Downtrend</text><text x="180" y="65" font-family="monospace" font-size="7" fill="#4ade80" font-weight="400">Wave 1 up</text><text x="180" y="76" font-family="monospace" font-size="6" fill="#9ca3af" font-weight="400">(disbelief)</text><text x="140" y="122" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.25)" text-anchor="middle">First impulse — usually missed by retail</text></svg>
+      <div class="el-caption">First impulse after trend exhaustion</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">The first push in a new trend, born from disbelief. Most traders are still positioned in the old trend and dismiss Wave 1 as a "bounce." Volume is moderate. Wave 1 often coincides with a CHoCH on the higher timeframe.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>Wave 1 is risky to trade because confirmation is weak — you might be catching a Wave B of a continuing correction. Better play: let Wave 1 complete, wait for Wave 2 pullback, then enter at Wave 3 start. That's your rule 5.5 gap-down reversal trade.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#22c55e">9</div>
+    <div class="el-name">Wave 3 — Extension</div>
+    <span class="badge" style="background:#22c55e20;color:#22c55e">Core</span>
+    <span class="badge" style="background:#f59e0b20;color:#f59e0b">Medium</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="115" x2="270" y2="115" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><polyline points="20,108 50,82 75,92" fill="none" stroke="#4ade80" stroke-width="2"/><circle cx="50" cy="82" r="3" fill="#4ade80"/><text x="50" y="76" font-family="monospace" font-size="10" fill="#4ade80" text-anchor="middle" font-weight="700">1</text><circle cx="75" cy="92" r="3" fill="#ef4444"/><text x="80" y="100" font-family="monospace" font-size="10" fill="#ef4444" font-weight="700">2</text><polyline points="75,92 180,15" fill="none" stroke="#4ade80" stroke-width="3"/><circle cx="180" cy="15" r="3.5" fill="#fbbf24"/><text x="180" y="9" font-family="monospace" font-size="11" fill="#fbbf24" text-anchor="middle" font-weight="700">3</text><polyline points="180,15 200,38 218,28" fill="none" stroke="#ef4444" stroke-width="1.8"/><circle cx="218" cy="28" r="3" fill="#ef4444"/><text x="223" y="36" font-family="monospace" font-size="10" fill="#ef4444" font-weight="700">4</text><polyline points="218,28 260,18" fill="none" stroke="#4ade80" stroke-width="2"/><circle cx="260" cy="18" r="3" fill="#4ade80"/><text x="263" y="14" font-family="monospace" font-size="10" fill="#4ade80" font-weight="700">5</text><line x1="180" y1="20" x2="180" y2="50" stroke="#fbbf24" stroke-width="0.5" stroke-dasharray="2,2"/><text x="115" y="38" font-family="monospace" font-size="8" fill="#fbbf24" text-anchor="middle" font-weight="700">LONGEST</text><text x="115" y="50" font-family="monospace" font-size="7" fill="#fbbf24" text-anchor="middle" font-weight="400">+ steepest</text><text x="140" y="122" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.25)" text-anchor="middle">Wave 3 is never the shortest — usually the longest</text></svg>
+      <div class="el-caption">The strongest and most tradable wave</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">Wave 3 is the most powerful wave — fastest, steepest, with the highest volume. By Elliott's rule, Wave 3 is NEVER the shortest of waves 1, 3, 5. Retail traders finally believe the trend and pile in, fueling the move. This is where most of the profit lives.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>This IS the trade. Your 15-min + 5-min confirmation, entering at the EMA reclaim or break — you're entering at the start of Wave 3. Trail SL aggressively. Wave 3 days are when the 60-point target gets blown past and you should let it run to 150+ points.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#22c55e">10</div>
+    <div class="el-name">Wave 5 — Exhaustion</div>
+    <span class="badge" style="background:#f59e0b20;color:#f59e0b">Important</span>
+    <span class="badge" style="background:#ef444420;color:#ef4444">Hard</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="115" x2="270" y2="115" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><polyline points="20,105 50,85" fill="none" stroke="#4ade80" stroke-width="2"/><text x="35" y="80" font-family="monospace" font-size="9" fill="#4ade80" text-anchor="middle" font-weight="700">1</text><polyline points="50,85 70,95" fill="none" stroke="#ef4444" stroke-width="1.5"/><text x="75" y="100" font-family="monospace" font-size="9" fill="#ef4444" font-weight="700">2</text><polyline points="70,95 150,30" fill="none" stroke="#4ade80" stroke-width="2.5"/><text x="148" y="25" font-family="monospace" font-size="9" fill="#4ade80" text-anchor="middle" font-weight="700">3</text><polyline points="150,30 175,50" fill="none" stroke="#ef4444" stroke-width="1.5"/><text x="178" y="58" font-family="monospace" font-size="9" fill="#ef4444" font-weight="700">4</text><polyline points="175,50 230,18" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="3,2"/><text x="230" y="13" font-family="monospace" font-size="10" fill="#fbbf24" text-anchor="middle" font-weight="700">5</text><circle cx="230" cy="18" r="3" fill="#fbbf24"/><polyline points="230,18 248,32 256,45" fill="none" stroke="#ef4444" stroke-width="2"/><line x1="245" y1="15" x2="245" y2="58" stroke="#ef4444" stroke-width="0.6" stroke-dasharray="2,2"/><text x="265" y="38" font-family="monospace" font-size="7" fill="#ef4444" text-anchor="end" font-weight="400">drop</text><text x="115" y="100" font-family="monospace" font-size="7" fill="#fbbf24" text-anchor="middle" font-weight="400">divergence — momentum fading</text><text x="140" y="122" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.25)" text-anchor="middle">Final push — often on weaker volume</text></svg>
+      <div class="el-caption">Final push before correction — exit zone</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">The last wave of an impulse. Often shorter than Wave 3, on lower volume, with RSI divergence. Wave 5 frequently makes a new high/low but momentum is fading. The smart money is distributing here while retail is buying euphorically.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>NEVER initiate new options here — you're buying the top. If you're already in a profitable trade from Wave 3, Wave 5 is your EXIT signal. Tighten trail SL to half the prior wave's range. Then watch for the ABC correction to set up the next opposite trade.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SMC WAVE CONCEPTS ============ -->
+<div class="group-header" style="border-color:#a855f740"><h2 style="color:#a855f7">SMC Wave Concepts</h2><span class="group-num" style="color:#a855f7">Elements 11–15</span></div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#a855f7">11</div>
+    <div class="el-name">Liquidity Sweep Wave</div>
+    <span class="badge" style="background:#22c55e20;color:#22c55e">Core</span>
+    <span class="badge" style="background:#f59e0b20;color:#f59e0b">Medium</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="80" x2="270" y2="80" stroke="#ef4444" stroke-width="0.6" stroke-dasharray="3,2" opacity="0.7"/><text x="265" y="76" font-family="monospace" font-size="7" fill="#f87171" text-anchor="end" font-weight="400">obvious low</text><polyline points="20,40 45,55 35,48 65,68 55,60 90,76" fill="none" stroke="#9ca3af" stroke-width="1.5"/><line x1="115" y1="75" x2="115" y2="108" stroke="#22c55e" stroke-width="1"/><rect x="108" y="78" width="14" height="10" fill="#22c55e"/><circle cx="115" cy="105" r="3" fill="#fbbf24"/><text x="115" y="120" font-family="monospace" font-size="7" fill="#fbbf24" text-anchor="middle" font-weight="700">⚡ sweep</text><polyline points="115,78 145,60 165,68 195,40 220,48 250,22" fill="none" stroke="#4ade80" stroke-width="2.5"/><circle cx="115" cy="78" r="3" fill="#4ade80"/><line x1="125" y1="85" x2="155" y2="100" stroke="#a855f7" stroke-width="0.5" stroke-dasharray="2,2"/><text x="160" y="103" font-family="monospace" font-size="7" fill="#a855f7" font-weight="400">smart $ buys</text><text x="140" y="13" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.25)" text-anchor="middle">Spike below support → reverse hard</text></svg>
+      <div class="el-caption">Stop hunt below support, then violent reversal</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">A wave that briefly pushes below an obvious support (or above resistance) to trigger clustered stop-losses, then violently reverses. The wick is long, the close is back inside the prior range. This is operators harvesting liquidity to fill their own orders.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>Today's Nifty chart is exactly this — long-wick green candle at the bottom. Entry trigger: sweep + close back inside + bullish 5-min confirmation = CE buy. SL goes BELOW the sweep wick, not above it. This is rule 5.5 with maximum confluence.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#a855f7">12</div>
+    <div class="el-name">Break of Structure (BOS)</div>
+    <span class="badge" style="background:#22c55e20;color:#22c55e">Core</span>
+    <span class="badge" style="background:#f59e0b20;color:#f59e0b">Medium</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="50" x2="270" y2="50" stroke="#fbbf24" stroke-width="0.6" stroke-dasharray="3,2" opacity="0.7"/><text x="14" y="46" font-family="monospace" font-size="7" fill="#fbbf24" font-weight="400">last swing high</text><polyline points="20,90 50,55 70,68 100,52 120,62 150,55" fill="none" stroke="#4ade80" stroke-width="2"/><circle cx="100" cy="52" r="2.5" fill="#4ade80"/><text x="100" y="46" font-family="monospace" font-size="7" fill="#4ade80" text-anchor="middle" font-weight="400">HH</text><line x1="170" y1="32" x2="170" y2="58" stroke="#22c55e" stroke-width="1.2"/><rect x="162" y="34" width="16" height="22" fill="#22c55e"/><text x="200" y="32" font-family="monospace" font-size="8" fill="#4ade80" font-weight="700">BOS ↑</text><text x="200" y="42" font-family="monospace" font-size="7" fill="#4ade80" font-weight="400">body close</text><text x="200" y="50" font-family="monospace" font-size="7" fill="#4ade80" font-weight="400">above HH</text><polyline points="178,34 200,55 215,45 240,25 262,18" fill="none" stroke="#4ade80" stroke-width="2"/><line x1="170" y1="55" x2="170" y2="115" stroke="#22c55e" stroke-width="0.3" stroke-dasharray="2,2" opacity="0.4"/><text x="140" y="122" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.25)" text-anchor="middle">Body close beyond swing = trend confirmed</text></svg>
+      <div class="el-caption">Body close past prior swing point</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">A candle whose body closes beyond the most recent swing high (bullish BOS) or low (bearish BOS). Wicks alone don't count. BOS confirms that the prevailing trend has institutional backing and is likely to continue.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>Your filter for false EMA breakouts in rule 5.7. When the 5-min closes above an EMA, also check: does it close above the last swing high? Yes = real breakout, enter. No = suspect, wait for one more confirmation candle. BOS is your "trend is real" signal.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#a855f7">13</div>
+    <div class="el-name">Change of Character (CHoCH)</div>
+    <span class="badge" style="background:#f59e0b20;color:#f59e0b">Important</span>
+    <span class="badge" style="background:#ef444420;color:#ef4444">Hard</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="55" x2="270" y2="55" stroke="#f87171" stroke-width="0.6" stroke-dasharray="3,2" opacity="0.7"/><text x="14" y="51" font-family="monospace" font-size="7" fill="#f87171" font-weight="400">last LH</text><polyline points="20,30 45,55 35,42 70,72 60,60 100,90 85,78 125,108" fill="none" stroke="#ef4444" stroke-width="1.8"/><circle cx="45" cy="55" r="2" fill="#f87171"/><text x="48" y="65" font-family="monospace" font-size="7" fill="#f87171" font-weight="400">LH</text><line x1="135" y1="100" x2="135" y2="120" stroke="#22c55e" stroke-width="1"/><rect x="129" y="102" width="12" height="14" fill="#22c55e"/><polyline points="141,100 165,80 180,88 200,62 220,70 240,42" fill="none" stroke="#4ade80" stroke-width="2"/><line x1="250" y1="38" x2="250" y2="58" stroke="#a855f7" stroke-width="1.5"/><rect x="242" y="40" width="16" height="18" fill="#a855f7"/><text x="265" y="30" font-family="monospace" font-size="8" fill="#a855f7" text-anchor="end" font-weight="700">CHoCH</text><text x="265" y="40" font-family="monospace" font-size="6" fill="#a855f7" text-anchor="end" font-weight="400">first close</text><text x="265" y="48" font-family="monospace" font-size="6" fill="#a855f7" text-anchor="end" font-weight="400">above LH</text><text x="140" y="122" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.25)" text-anchor="middle">First reversal signal — earlier than BOS</text></svg>
+      <div class="el-caption">First close beyond prior opposing swing</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">The first candle in a downtrend to close above the most recent Lower High (or in an uptrend, below the last Higher Low). Unlike BOS which confirms continuation, CHoCH is the earliest warning that the trend may have flipped. It precedes BOS.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>The signal for your rule 5.5 (gap-down reversal). If price gaps down, builds LH+LL structure, then closes above the last LH — that's a CHoCH and your highest-confidence reversal trade. Combine with sweep + bullish 5-min candle for maximum edge.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#a855f7">14</div>
+    <div class="el-name">Internal vs External Structure</div>
+    <span class="badge" style="background:#60a5fa20;color:#60a5fa">Advanced</span>
+    <span class="badge" style="background:#ef444420;color:#ef4444">Hard</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="115" x2="270" y2="115" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><polyline points="20,100 90,30 130,55 200,20 240,40 268,15" fill="none" stroke="#a855f7" stroke-width="2.5"/><circle cx="90" cy="30" r="3" fill="#a855f7"/><circle cx="130" cy="55" r="3" fill="#a855f7"/><circle cx="200" cy="20" r="3" fill="#a855f7"/><circle cx="240" cy="40" r="3" fill="#a855f7"/><text x="155" y="14" font-family="monospace" font-size="7" fill="#a855f7" text-anchor="middle" font-weight="700">External (HTF)</text><polyline points="20,100 30,85 25,92 45,68 38,75 60,52 52,60 75,40 68,48 90,30" fill="none" stroke="#4ade80" stroke-width="0.8" opacity="0.7"/><polyline points="90,30 95,38 92,32 105,48 100,42 115,55 112,48 125,52 130,55" fill="none" stroke="#ef4444" stroke-width="0.8" opacity="0.7"/><polyline points="130,55 140,45 135,52 155,38 148,46 170,30 165,38 185,25 180,30 200,20" fill="none" stroke="#4ade80" stroke-width="0.8" opacity="0.7"/><text x="50" y="120" font-family="monospace" font-size="6" fill="#4ade80" text-anchor="middle" font-weight="400">internal up</text><text x="115" y="68" font-family="monospace" font-size="6" fill="#ef4444" text-anchor="middle" font-weight="400">internal down</text><text x="165" y="120" font-family="monospace" font-size="6" fill="#4ade80" text-anchor="middle" font-weight="400">internal up</text></svg>
+      <div class="el-caption">Small waves nest inside larger waves</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">A larger wave is made of smaller waves. The external structure is the major trend visible on higher timeframes. Internal structure is what's happening within each external wave on lower timeframes. They can be opposite — internal correction within external impulse.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>Your 1-day external structure (rule 2.1) sets directional bias. Your 5-min internal structure provides entry. Best trades = both align. If 1-day is bullish (external) and 5-min just printed a CHoCH up (internal flip), that's the highest-edge setup.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#a855f7">15</div>
+    <div class="el-name">Wave Confluence with Zones</div>
+    <span class="badge" style="background:#60a5fa20;color:#60a5fa">Advanced</span>
+    <span class="badge" style="background:#f59e0b20;color:#f59e0b">Medium</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="115" x2="270" y2="115" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><rect x="20" y="78" width="240" height="14" fill="rgba(34,197,94,0.13)" stroke="#22c55e" stroke-width="1" stroke-dasharray="3,2"/><text x="25" y="88" font-family="monospace" font-size="7" fill="#4ade80" font-weight="400">Demand zone</text><polyline points="30,30 55,55 45,45 75,72 65,62 100,85 90,78 130,90" fill="none" stroke="#ef4444" stroke-width="1.8"/><circle cx="130" cy="90" r="4" fill="#fbbf24"/><text x="130" y="105" font-family="monospace" font-size="7" fill="#fbbf24" text-anchor="middle" font-weight="700">Wave ends</text><text x="130" y="113" font-family="monospace" font-size="7" fill="#fbbf24" text-anchor="middle" font-weight="400">at zone</text><polyline points="130,90 155,72 145,80 175,55 165,62 200,38 190,45 225,22 215,30 250,12" fill="none" stroke="#4ade80" stroke-width="2"/><line x1="130" y1="78" x2="130" y2="90" stroke="#a855f7" stroke-width="0.5" stroke-dasharray="2,2"/><text x="200" y="14" font-family="monospace" font-size="7" fill="#a855f7" font-weight="400">Reversal impulse</text></svg>
+      <div class="el-caption">Wave terminates exactly at a demand zone</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">When a wave's endpoint coincides with a supply/demand zone, a previous day level, or an EMA, the probability of reversal multiplies. Single signal = decent. Two-way confluence = strong. Three or more = highest-edge setup.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>Use this for entry quality scoring. Wave ends + 200 EMA + PDL + OI Put-writing wall all within 30 points of each other = score 4 setup. Take full size, trail SL aggressively. No confluence = skip, even if all your standard rules tick.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ WAVE PATTERNS ============ -->
+<div class="group-header" style="border-color:#f59e0b40"><h2 style="color:#f59e0b">Wave Patterns</h2><span class="group-num" style="color:#f59e0b">Elements 16–20</span></div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#f59e0b">16</div>
+    <div class="el-name">Zigzag Correction</div>
+    <span class="badge" style="background:#22c55e20;color:#22c55e">Core</span>
+    <span class="badge" style="background:#22c55e20;color:#22c55e">Easy</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="115" x2="270" y2="115" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><polyline points="20,25 60,18 90,15" fill="none" stroke="#4ade80" stroke-width="1.5"/><text x="55" y="11" font-family="monospace" font-size="7" fill="#4ade80" text-anchor="middle" font-weight="400">trend high</text><polyline points="90,15 140,68" fill="none" stroke="#ef4444" stroke-width="2.5"/><circle cx="140" cy="68" r="3" fill="#ef4444"/><text x="143" y="78" font-family="monospace" font-size="11" fill="#ef4444" font-weight="700">A</text><polyline points="140,68 175,42" fill="none" stroke="#4ade80" stroke-width="2"/><circle cx="175" cy="42" r="3" fill="#4ade80"/><text x="178" y="38" font-family="monospace" font-size="11" fill="#4ade80" font-weight="700">B</text><polyline points="175,42 230,98" fill="none" stroke="#ef4444" stroke-width="2.5"/><circle cx="230" cy="98" r="3" fill="#ef4444"/><text x="240" y="103" font-family="monospace" font-size="11" fill="#ef4444" font-weight="700">C</text><line x1="90" y1="15" x2="245" y2="15" stroke="#a855f7" stroke-width="0.4" stroke-dasharray="2,2"/><line x1="140" y1="68" x2="245" y2="68" stroke="#a855f7" stroke-width="0.4" stroke-dasharray="2,2"/><text x="260" y="65" font-family="monospace" font-size="6" fill="#a855f7" text-anchor="end" font-weight="400">A high</text><text x="260" y="13" font-family="monospace" font-size="6" fill="#a855f7" text-anchor="end" font-weight="400">B fails</text><text x="140" y="122" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.25)" text-anchor="middle">Sharp 5-3-5 correction · C extends past A</text></svg>
+      <div class="el-caption">Sharp ABC where C exceeds A</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">The most aggressive corrective pattern. Wave A is a 5-wave impulse against trend. Wave B is a shallow 3-wave bounce that rarely exceeds 61.8% of A. Wave C is another 5-wave impulse, equal to or longer than A. Total move is steep and fast.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>Recognize zigzags as continuation patterns within larger trends. After a 5-wave move up + sharp zigzag down + price holds above prior swing low = the bigger trend resumes. Take CE on the Wave C completion. Use Wave A's length to project where C will end.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#f59e0b">17</div>
+    <div class="el-name">Flat Correction</div>
+    <span class="badge" style="background:#22c55e20;color:#22c55e">Core</span>
+    <span class="badge" style="background:#22c55e20;color:#22c55e">Easy</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="115" x2="270" y2="115" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><polyline points="20,30 50,18 70,12" fill="none" stroke="#4ade80" stroke-width="1.5"/><polyline points="70,12 120,55" fill="none" stroke="#ef4444" stroke-width="2"/><circle cx="120" cy="55" r="3" fill="#ef4444"/><text x="120" y="65" font-family="monospace" font-size="11" fill="#ef4444" text-anchor="middle" font-weight="700">A</text><polyline points="120,55 170,15" fill="none" stroke="#4ade80" stroke-width="2"/><circle cx="170" cy="15" r="3" fill="#4ade80"/><text x="170" y="10" font-family="monospace" font-size="11" fill="#4ade80" text-anchor="middle" font-weight="700">B</text><polyline points="170,15 220,58" fill="none" stroke="#ef4444" stroke-width="2"/><circle cx="220" cy="58" r="3" fill="#ef4444"/><text x="223" y="68" font-family="monospace" font-size="11" fill="#ef4444" font-weight="700">C</text><polyline points="220,58 250,32" fill="none" stroke="#4ade80" stroke-width="1.5"/><line x1="70" y1="12" x2="180" y2="12" stroke="#a855f7" stroke-width="0.5" stroke-dasharray="3,2"/><line x1="120" y1="55" x2="225" y2="55" stroke="#a855f7" stroke-width="0.5" stroke-dasharray="3,2"/><text x="200" y="100" font-family="monospace" font-size="7" fill="#a855f7" font-weight="400">sideways box</text><text x="140" y="122" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.25)" text-anchor="middle">3-3-5 sideways · B reaches A's start</text></svg>
+      <div class="el-caption">Sideways ABC where B nearly equals A</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">A sideways correction. Wave A is a weak 3-wave move. Wave B retraces back almost to where A started — fooling traders into thinking the trend resumed. Wave C is a 5-wave move that ends near or just past A. Total range is contained within a horizontal box.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>Flats are typical of 11:30–14:00 sideways chop (your no-trade zone). DO NOT trade through them. Wait for the breakout from the flat's range — that breakout is usually Wave 3 of the larger trend. Entry on the breakout candle's 5-min confirmation.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#f59e0b">18</div>
+    <div class="el-name">Triangle Consolidation</div>
+    <span class="badge" style="background:#f59e0b20;color:#f59e0b">Important</span>
+    <span class="badge" style="background:#f59e0b20;color:#f59e0b">Medium</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="115" x2="270" y2="115" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><polyline points="20,90 35,30 60,82 90,42 120,75 145,55 170,68" fill="none" stroke="#9ca3af" stroke-width="1.8"/><line x1="35" y1="30" x2="180" y2="63" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,2"/><line x1="20" y1="90" x2="180" y2="63" stroke="#4ade80" stroke-width="1" stroke-dasharray="3,2"/><circle cx="35" cy="30" r="2" fill="#ef4444"/><circle cx="90" cy="42" r="2" fill="#ef4444"/><circle cx="145" cy="55" r="2" fill="#ef4444"/><circle cx="20" cy="90" r="2" fill="#4ade80"/><circle cx="60" cy="82" r="2" fill="#4ade80"/><circle cx="120" cy="75" r="2" fill="#4ade80"/><polyline points="170,68 200,20 250,8" fill="none" stroke="#4ade80" stroke-width="2.5"/><circle cx="200" cy="20" r="3" fill="#fbbf24"/><text x="220" y="35" font-family="monospace" font-size="8" fill="#fbbf24" font-weight="700">BREAKOUT</text><text x="60" y="14" font-family="monospace" font-size="7" fill="#ef4444" font-weight="400">lower highs</text><text x="60" y="105" font-family="monospace" font-size="7" fill="#4ade80" font-weight="400">higher lows</text><text x="140" y="125" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.25)" text-anchor="middle">5 waves coiling · explosive exit</text></svg>
+      <div class="el-caption">Converging price action → expansion</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">Five waves of decreasing amplitude — lower highs and higher lows converging to a point. Volume contracts. Tension builds. The breakout direction (usually the direction of the trend before the triangle) starts a powerful new impulse.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>Triangles often form during your 11:30–14:00 no-trade zone. Mark the triangle's apex. The 2:00 PM conditional window (rule 3.4) is perfect for trading triangle breakouts — explosive moves into the close. Entry on 5-min body close beyond the trendline.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#f59e0b">19</div>
+    <div class="el-name">Diagonal Wedge</div>
+    <span class="badge" style="background:#60a5fa20;color:#60a5fa">Advanced</span>
+    <span class="badge" style="background:#ef444420;color:#ef4444">Hard</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="115" x2="270" y2="115" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><polyline points="20,105 60,45 80,75 130,30 150,50 195,18" fill="none" stroke="#fbbf24" stroke-width="2"/><line x1="60" y1="45" x2="200" y2="14" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="3,2"/><line x1="80" y1="75" x2="200" y2="58" stroke="#fbbf24" stroke-width="0.8" stroke-dasharray="3,2"/><circle cx="60" cy="45" r="2" fill="#fbbf24"/><circle cx="130" cy="30" r="2" fill="#fbbf24"/><circle cx="195" cy="18" r="2" fill="#fbbf24"/><circle cx="80" cy="75" r="2" fill="#fbbf24"/><circle cx="150" cy="50" r="2" fill="#fbbf24"/><polyline points="195,18 220,42 245,88" fill="none" stroke="#ef4444" stroke-width="2.5"/><text x="80" y="14" font-family="monospace" font-size="7" fill="#fbbf24" font-weight="400">Rising wedge</text><text x="160" y="100" font-family="monospace" font-size="7" fill="#fbbf24" font-weight="400">narrowing</text><text x="240" y="38" font-family="monospace" font-size="7" fill="#ef4444" text-anchor="end" font-weight="400">sharp reversal</text><text x="140" y="125" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.25)" text-anchor="middle">Trend exhaustion · expect sharp reversal</text></svg>
+      <div class="el-caption">Rising wedge ends in violent reversal</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">A wedge has converging trendlines like a triangle, but both lines slope in the same direction. Rising wedge = both lines slope up, but the slope is decreasing — bearish reversal pattern. Falling wedge = bullish reversal. Wedges typically appear at Wave 5.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>If you spot a rising wedge forming on the 5-min during a CE position — book profits immediately, do not wait for the break. Wedges resolve violently. After confirmation (5-min close below the lower trendline), consider a PE entry per rule 5.7 on the opposite side.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#f59e0b">20</div>
+    <div class="el-name">Truncated Wave 5</div>
+    <span class="badge" style="background:#60a5fa20;color:#60a5fa">Advanced</span>
+    <span class="badge" style="background:#ef444420;color:#ef4444">Hard</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="115" x2="270" y2="115" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><polyline points="20,105 50,80" fill="none" stroke="#4ade80" stroke-width="2"/><text x="35" y="76" font-family="monospace" font-size="9" fill="#4ade80" text-anchor="middle" font-weight="700">1</text><polyline points="50,80 75,95" fill="none" stroke="#ef4444" stroke-width="1.5"/><text x="78" y="100" font-family="monospace" font-size="9" fill="#ef4444" font-weight="700">2</text><polyline points="75,95 160,15" fill="none" stroke="#4ade80" stroke-width="2.5"/><circle cx="160" cy="15" r="3" fill="#4ade80"/><text x="160" y="9" font-family="monospace" font-size="9" fill="#4ade80" text-anchor="middle" font-weight="700">3</text><polyline points="160,15 185,42" fill="none" stroke="#ef4444" stroke-width="1.5"/><text x="188" y="48" font-family="monospace" font-size="9" fill="#ef4444" font-weight="700">4</text><polyline points="185,42 220,25" fill="none" stroke="#fbbf24" stroke-width="2" stroke-dasharray="4,2"/><circle cx="220" cy="25" r="3.5" fill="#fbbf24"/><text x="225" y="20" font-family="monospace" font-size="9" fill="#fbbf24" font-weight="700">5</text><line x1="160" y1="15" x2="225" y2="15" stroke="#a855f7" stroke-width="0.5" stroke-dasharray="2,2"/><text x="240" y="13" font-family="monospace" font-size="6" fill="#a855f7" text-anchor="start" font-weight="400">W3 high</text><text x="225" y="38" font-family="monospace" font-size="6" fill="#fbbf24" font-weight="400">never reached</text><polyline points="220,25 240,52 258,85" fill="none" stroke="#ef4444" stroke-width="2.5"/><text x="265" y="80" font-family="monospace" font-size="7" fill="#ef4444" text-anchor="end" font-weight="700">CRASH</text><text x="140" y="125" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.25)" text-anchor="middle">W5 fails to exceed W3 — major reversal ahead</text></svg>
+      <div class="el-caption">Wave 5 fails to exceed Wave 3 high</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">When Wave 5 fails to break above the Wave 3 peak (in an uptrend), the impulse has "truncated." This is a strong signal of trend exhaustion and predicts a sharp reversal. The market literally couldn't muster the strength for a new high.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>Truncation is your "take profit NOW" signal. If you're in a CE position and price tries to make a new high but stalls and rolls over below the prior peak — exit immediately. Don't wait for SL hit. The subsequent move down is often as long as the entire 1-3 advance.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TRADING APPLICATION ============ -->
+<div class="group-header" style="border-color:#ec489940"><h2 style="color:#ec4899">Trading Application</h2><span class="group-num" style="color:#ec4899">Elements 21–24</span></div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#ec4899">21</div>
+    <div class="el-name">Wave 2 Entry — Pullback Buy</div>
+    <span class="badge" style="background:#22c55e20;color:#22c55e">Core</span>
+    <span class="badge" style="background:#f59e0b20;color:#f59e0b">Medium</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="115" x2="270" y2="115" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><polyline points="20,108 60,55" fill="none" stroke="#4ade80" stroke-width="2.5"/><circle cx="60" cy="55" r="3" fill="#4ade80"/><text x="60" y="48" font-family="monospace" font-size="9" fill="#4ade80" text-anchor="middle" font-weight="700">1</text><polyline points="60,55 100,82" fill="none" stroke="#ef4444" stroke-width="2"/><circle cx="100" cy="82" r="4" fill="#ec4899"/><text x="110" y="90" font-family="monospace" font-size="9" fill="#ec4899" font-weight="700">2</text><text x="125" y="78" font-family="monospace" font-size="8" fill="#ec4899" font-weight="700">⚡ BUY</text><line x1="20" y1="108" x2="120" y2="108" stroke="#fbbf24" stroke-width="0.5" stroke-dasharray="2,2"/><text x="125" y="113" font-family="monospace" font-size="6" fill="#fbbf24" font-weight="400">50-62% retrace</text><polyline points="100,82 130,60 145,68 175,38" fill="none" stroke="#4ade80" stroke-width="2.5"/><polyline points="175,38 195,55" fill="none" stroke="#ef4444" stroke-width="1.5" opacity="0.6"/><polyline points="195,55 245,18" fill="none" stroke="#4ade80" stroke-width="2" opacity="0.5"/><text x="165" y="30" font-family="monospace" font-size="7" fill="#4ade80" font-weight="400">Wave 3 →</text><line x1="60" y1="55" x2="110" y2="55" stroke="#a855f7" stroke-width="0.4" stroke-dasharray="2,2"/><text x="115" y="58" font-family="monospace" font-size="6" fill="#a855f7" font-weight="400">W1 high</text><text x="140" y="125" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.25)" text-anchor="middle">Buy the pullback · ride Wave 3</text></svg>
+      <div class="el-caption">Entry on Wave 2 completion at 50-62% retrace</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">After Wave 1 completes, price pulls back in Wave 2 — typically retracing 50-62% of Wave 1. Wave 2 commonly ends at the 20 EMA or a demand zone. Entry here gives the best risk-to-reward because Wave 3 is about to begin.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>This is your highest R:R entry. After morning impulse + pullback to 20 EMA + 5-min bullish confirmation = Wave 2 complete, Wave 3 starting. SL goes below the Wave 2 low (small SL = ₹10k risk easy to manage). Trail aggressively as Wave 3 unfolds.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#ec4899">22</div>
+    <div class="el-name">Wave 3 Continuation Entry</div>
+    <span class="badge" style="background:#22c55e20;color:#22c55e">Core</span>
+    <span class="badge" style="background:#22c55e20;color:#22c55e">Easy</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="115" x2="270" y2="115" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><polyline points="20,108 45,82" fill="none" stroke="#4ade80" stroke-width="2"/><circle cx="45" cy="82" r="2.5" fill="#4ade80"/><text x="42" y="76" font-family="monospace" font-size="8" fill="#4ade80" font-weight="700">1</text><polyline points="45,82 75,98" fill="none" stroke="#ef4444" stroke-width="1.5"/><circle cx="75" cy="98" r="2.5" fill="#ef4444"/><text x="80" y="105" font-family="monospace" font-size="8" fill="#ef4444" font-weight="700">2</text><line x1="45" y1="82" x2="115" y2="82" stroke="#fbbf24" stroke-width="0.6" stroke-dasharray="2,2"/><text x="60" y="78" font-family="monospace" font-size="6" fill="#fbbf24" font-weight="400">W1 high</text><polyline points="75,98 105,75" fill="none" stroke="#4ade80" stroke-width="1.8"/><line x1="115" y1="65" x2="115" y2="85" stroke="#ec4899" stroke-width="2.5"/><rect x="107" y="68" width="16" height="20" fill="#ec4899"/><text x="135" y="62" font-family="monospace" font-size="8" fill="#ec4899" font-weight="700">⚡ BUY</text><text x="135" y="72" font-family="monospace" font-size="6" fill="#ec4899" font-weight="400">break of W1 high</text><polyline points="123,68 150,50 170,58 200,28 220,38 250,15" fill="none" stroke="#4ade80" stroke-width="2.5"/><text x="225" y="22" font-family="monospace" font-size="7" fill="#4ade80" font-weight="400">Wave 3 unfolds</text><text x="140" y="125" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.25)" text-anchor="middle">Buy on break of Wave 1 high — confirmation entry</text></svg>
+      <div class="el-caption">Entry on break above Wave 1 high — BOS confirms Wave 3</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">A more conservative entry than Wave 2. Wait for price to break above the Wave 1 high (a BOS) — this confirms Wave 3 has started. You give up some R:R for confirmation. Reward: lowest chance of being wrong about whether the pullback is over.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>This matches your strict rule-based entry style. After morning Wave 1 + pullback + price breaks the morning high with 5-min body close + volume spike = enter CE. SL goes below the pullback low. Target the prior impulse's 1.618x extension.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#ec4899">23</div>
+    <div class="el-name">Wave 5 Exhaustion Exit</div>
+    <span class="badge" style="background:#f59e0b20;color:#f59e0b">Important</span>
+    <span class="badge" style="background:#f59e0b20;color:#f59e0b">Medium</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="115" x2="270" y2="115" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><polyline points="20,105 45,82" fill="none" stroke="#4ade80" stroke-width="1.8"/><text x="42" y="76" font-family="monospace" font-size="8" fill="#4ade80" font-weight="700">1</text><polyline points="45,82 70,95" fill="none" stroke="#ef4444" stroke-width="1.5"/><text x="75" y="100" font-family="monospace" font-size="8" fill="#ef4444" font-weight="700">2</text><polyline points="70,95 140,30" fill="none" stroke="#4ade80" stroke-width="2.5"/><text x="140" y="24" font-family="monospace" font-size="8" fill="#4ade80" text-anchor="middle" font-weight="700">3</text><polyline points="140,30 165,52" fill="none" stroke="#ef4444" stroke-width="1.5"/><text x="170" y="58" font-family="monospace" font-size="8" fill="#ef4444" font-weight="700">4</text><polyline points="165,52 210,22" fill="none" stroke="#4ade80" stroke-width="1.5" stroke-dasharray="3,2"/><circle cx="210" cy="22" r="4" fill="#ec4899"/><text x="215" y="18" font-family="monospace" font-size="8" fill="#ec4899" font-weight="700">5</text><text x="220" y="40" font-family="monospace" font-size="8" fill="#ec4899" font-weight="700">⚡ EXIT</text><text x="220" y="50" font-family="monospace" font-size="6" fill="#ec4899" font-weight="400">book profits</text><polyline points="210,22 235,48 256,82" fill="none" stroke="#ef4444" stroke-width="2"/><text x="265" y="76" font-family="monospace" font-size="7" fill="#ef4444" text-anchor="end" font-weight="400">drop</text><text x="140" y="125" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.25)" text-anchor="middle">Don't hold through Wave 5 · book and wait</text></svg>
+      <div class="el-caption">Exit at Wave 5 — don't ride the reversal</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">If you entered at Wave 2 or Wave 3, the goal is to exit at Wave 5's peak, not ride through the correction. Signs Wave 5 is ending: divergence on RSI/MACD, volume declining as price rises, candles getting smaller, approach to a major resistance/zone.</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>Don't get greedy. Once 60-point target hit + Wave 5 signs appearing (volume dropping, smaller candles, approach to 200 EMA from below) = exit. Your strategy already says "exit at 60 points on slow days" — Wave 5 exhaustion is when that rule must override the "trail" rule.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="el-card">
+  <div class="el-card-header">
+    <div class="el-num" style="background:#ec4899">24</div>
+    <div class="el-name">Wave C Reversal Entry</div>
+    <span class="badge" style="background:#60a5fa20;color:#60a5fa">Advanced</span>
+    <span class="badge" style="background:#ef444420;color:#ef4444">Hard</span>
+  </div>
+  <div class="el-body">
+    <div class="el-visual">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130"><rect width="280" height="130" fill="#080c14" rx="4"/><line x1="10" y1="115" x2="270" y2="115" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><polyline points="15,95 35,72 25,82 50,52 40,60 80,18" fill="none" stroke="#4ade80" stroke-width="1.8"/><text x="60" y="14" font-family="monospace" font-size="7" fill="#4ade80" font-weight="400">5-wave top</text><polyline points="80,18 110,55" fill="none" stroke="#ef4444" stroke-width="2"/><circle cx="110" cy="55" r="3" fill="#ef4444"/><text x="113" y="65" font-family="monospace" font-size="10" fill="#ef4444" font-weight="700">A</text><polyline points="110,55 145,30" fill="none" stroke="#4ade80" stroke-width="1.8"/><circle cx="145" cy="30" r="3" fill="#4ade80"/><text x="145" y="24" font-family="monospace" font-size="10" fill="#4ade80" text-anchor="middle" font-weight="700">B</text><polyline points="145,30 200,90" fill="none" stroke="#ef4444" stroke-width="2.5"/><circle cx="200" cy="90" r="4" fill="#ec4899"/><text x="207" y="98" font-family="monospace" font-size="10" fill="#ec4899" font-weight="700">C</text><text x="215" y="85" font-family="monospace" font-size="8" fill="#ec4899" font-weight="700">⚡ BUY</text><line x1="110" y1="55" x2="205" y2="55" stroke="#a855f7" stroke-width="0.4" stroke-dasharray="2,2"/><text x="225" y="58" font-family="monospace" font-size="6" fill="#a855f7" font-weight="400">A=C target</text><polyline points="200,90 225,68 245,40 265,30" fill="none" stroke="#4ade80" stroke-width="2"/><text x="255" y="22" font-family="monospace" font-size="7" fill="#4ade80" text-anchor="end" font-weight="400">new impulse</text><text x="140" y="125" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.25)" text-anchor="middle">Buy Wave C completion = catch the new uptrend</text></svg>
+      <div class="el-caption">Buy at Wave C completion — catch the new impulse</div>
+    </div>
+    <div class="el-text">
+      <p class="el-desc">When an ABC correction completes, the original trend resumes with a fresh 5-wave impulse. The C wave's end is the highest-edge entry point — you're entering at the start of a new larger trend. Wave C often equals Wave A (measured move).</p>
+      <div class="prac-box">
+        <strong>In Your Strategy</strong>
+        <p>The textbook gap-down reversal trade (rule 5.5). Morning gap down = could be Wave A or C of a larger correction. If price sweeps liquidity + prints bullish 5-min + CHoCH back above prior LH = Wave C complete, new trend starting. Take CE with full conviction.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
